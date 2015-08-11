@@ -12,16 +12,20 @@
             }
 
             $array_words_to_check = explode(" ", $words_to_check);
+            $anagram_array = array();
             foreach ($array_words_to_check as $word)
             {
                 $split_word = str_split($word);
                 sort($split_word);
 
                 if ($split_word === $input_array) {
-                    return "Anagram";
+                    $not_split_word = implode(" ", $split_word);
+                    array_push($anagram_array, $not_split_word);
+                    return $anagram_array;
                 } else {
-                    return "No anagrams";
+                    return $anagram_array;
                 }
+
             }
 
 

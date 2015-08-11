@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>Anagram Results</title>
+        <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css'>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Here are the words that are Anagrams</h1>
+            {% if result is empty %}
+                <h3>No matching words!</h3>
+            {% endif %}
+
+            <ul>
+                {% for word in result %}
+                <li>{{ word }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </body>
+</html>
