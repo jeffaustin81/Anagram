@@ -16,17 +16,17 @@
             foreach ($array_words_to_check as $word)
             {
                 $split_word = str_split($word);
-                sort($split_word);
+                $sorted_split_word = $split_word;
+                sort($sorted_split_word);
 
-                if ($split_word === $input_array) {
-                    $not_split_word = implode(" ", $split_word);
+                if ($sorted_split_word === $input_array) {
+                    $not_split_word = implode($split_word);
                     array_push($anagram_array, $not_split_word);
-                    return $anagram_array;
-                } else {
-                    return $anagram_array;
                 }
 
             }
+
+            return $anagram_array;
 
 
         }
