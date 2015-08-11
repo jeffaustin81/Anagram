@@ -46,6 +46,28 @@
 
             $this->assertEquals(["eth", "het"], $result);
         }
+
+        function test_findAnagrams_partialMatch()
+        {
+            $test_Anagram = new Anagram;
+            $input = "path";
+            $words_to_check = "hat";
+
+            $result = $test_Anagram->findAnagrams($input, $words_to_check);
+
+            $this->assertEquals(["hat"], $result);
+        }
+
+        function test_findAnagrams_partialMatchMulti()
+        {
+            $test_Anagram = new Anagram;
+            $input = "path";
+            $words_to_check = "hat hapt hatt";
+
+            $result = $test_Anagram->findAnagrams($input, $words_to_check);
+
+            $this->assertEquals(["hat", "hapt"], $result);
+        }
     }
 
 ?>
