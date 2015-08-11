@@ -1,0 +1,7 @@
+check if string length is the same 1    "i"  "i"  "no anagrams"
+
+check if words to check are the same length
+
+"the"       "i hear there"  "no anagrams"
+
+check if words to check have the same letters
