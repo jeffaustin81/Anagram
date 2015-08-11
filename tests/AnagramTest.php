@@ -62,11 +62,22 @@
         {
             $test_Anagram = new Anagram;
             $input = "path";
-            $words_to_check = "hat hapt hatt";
+            $words_to_check = "hat hapt hatl hatt";
 
             $result = $test_Anagram->findAnagrams($input, $words_to_check);
 
             $this->assertEquals(["hat", "hapt"], $result);
+        }
+
+        function test_findAnagrams_partialMatchMulti2()
+        {
+            $test_Anagram = new Anagram;
+            $input = "patht";
+            $words_to_check = "hat hapt hatl hatt";
+
+            $result = $test_Anagram->findAnagrams($input, $words_to_check);
+
+            $this->assertEquals(["hat", "hapt", "hatt"], $result);
         }
     }
 
