@@ -28,10 +28,12 @@
                 sort($sorted_split_word);
                 $not_split_word = implode($split_word);
 
-                if ($sorted_split_word === $input_array) {
-
+                if ($sorted_split_word === $input_array)
+                {
                     array_push($anagram_array, $not_split_word);
-                } else if (array_intersect($sorted_split_word, $input_array) === array_unique($sorted_split_word))
+                }
+
+                else if (array_intersect($sorted_split_word, $input_array) === array_unique($sorted_split_word))
                 {
                     array_push($anagram_array, $not_split_word);
                 }
